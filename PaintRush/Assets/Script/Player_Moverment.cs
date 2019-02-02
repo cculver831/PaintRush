@@ -9,6 +9,7 @@ public class Player_Moverment : MonoBehaviour
     public Rigidbody rb;
     void Update()
     {
+      
         if (Input.GetKey("w"))
         {
             transform.Translate(0f, 0f, speed * Time.deltaTime);
