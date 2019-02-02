@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class Player_Moverment : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpSpeed = 10f;
+    public float speed = 100f;
     public float rotationSpeed = 100f;
-    private Rigidbody rb;
-    private Vector3 moveDirection = Vector3.zero;
-    private float heading;
+    public Rigidbody rb;
     void Update()
     {
-
-        float moveVert = Input.GetAxis("Horizontal") * speed;
-        float moveHor = Input.GetAxis("Vertical") * speed;
-
-        moveVert *= Time.deltaTime;
-        moveHor *= Time.deltaTime;
+        if (Input.GetKey("w"))
+        {
+            transform.Translate(0f, 0f, speed * Time.deltaTime);
+        }
+        if (Input.GetKey("s"))
+        {
+            transform.Translate(0f, 0f, -speed* Time.deltaTime);
+        }
+        if (Input.GetKey("a"))
+        {
+            transform.Translate(-speed * Time.deltaTime, 0f,0f);
+        }
+        if (Input.GetKey("d"))
+        {
+            transform.Translate(speed * Time.deltaTime, 0f, 0f);
+        }
     }
 }
