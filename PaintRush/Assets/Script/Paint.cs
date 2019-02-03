@@ -2,24 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Paint : MonoBehaviour
 {
-    public GameObject Brush;
-    public float BrushSize = 5f;
+
+ 
     public float speed = 5f;
     public float rotationSpeed = 5f;
-    private bool PlayerMove = false;
-    Vector3 currentPosition;
     Vector2 input;
-    Vector3 _lastposition;
     float angle;
     Quaternion targetRotation;
 
-    private void Start()
-    {
-        currentPosition = transform.position;
-
-    }
     void Update()
     {
         GetInput();
@@ -33,15 +25,7 @@ public class PlayerMovement : MonoBehaviour
         // Input based on WASD keys
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        PlayerMove = true;
-        if (PlayerMove)
-        {
-            // spawns paint behind player (is supposed to)
-            var position = transform.TransformPoint(Vector3.zero);
-            var go = Instantiate(Brush, new Vector3(input.x, input.y, 0.1f), Quaternion.identity, transform);
-            go.transform.localScale = Vector3.one * BrushSize;
-            
-        }
+
     }
     void CalculateDirection()
     {
