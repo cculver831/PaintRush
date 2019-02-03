@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5751a09bac7a497458d3231093105ce6
+guid: 7425eaccdd47f6b438d484c14ecc8705
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -31,7 +31,12 @@ ModelImporter:
     3300002: pCylinder5
     4300000: pCylinder4
     4300002: pCylinder5
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 39b502a4196a4164db9fb30e890266ea, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
