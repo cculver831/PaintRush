@@ -9,13 +9,16 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 5f;
     private bool PlayerMove = false;
+    Vector3 currentPosition;
     Vector2 input;
+    Vector3 _lastposition;
     float angle;
     Quaternion targetRotation;
 
     private void Start()
     {
-
+        currentPosition = transform.position;
+        
     }
     void Update()
     {
@@ -33,8 +36,10 @@ public class PlayerMovement : MonoBehaviour
         PlayerMove = true;
         if (PlayerMove)
         {
+            // spawns paint behind player (is supposed to)
             var position = transform.TransformPoint(Vector3.zero);
-            var go = Instantiate(Brush, transform.TransformPoint(Vector3.zero), Quaternion.identity, transform);
+            var go = Instantiate(Brush, new Vector3( input.x + 2.0F,input.y + 0.1f, 0), Quaternion.identity, transform);
+            _lastposition = transform.position;
         }
     }
     void CalculateDirection()
@@ -51,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
+
     }
+    
 
 }

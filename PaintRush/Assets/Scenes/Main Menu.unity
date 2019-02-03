@@ -182,7 +182,15 @@ PrefabInstance:
     - target: {fileID: 2300002, guid: e5bb328bb26b00d4bba550d6841aa2be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 985548338d30c2e4a9ee8381193d6d30, type: 2}
+      objectReference: {fileID: 2100000, guid: 39b502a4196a4164db9fb30e890266ea, type: 2}
+    - target: {fileID: 400012, guid: e5bb328bb26b00d4bba550d6841aa2be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.515031
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: e5bb328bb26b00d4bba550d6841aa2be, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5232239
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5bb328bb26b00d4bba550d6841aa2be, type: 3}
 --- !u!1 &43496458
@@ -235,7 +243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 985548338d30c2e4a9ee8381193d6d30, type: 2}
+  - {fileID: 2100000, guid: 39b502a4196a4164db9fb30e890266ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -505,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.67756563, g: 0.040628344, b: 0.7830189, a: 1}
+  m_Color: {r: 0, g: 0.77254903, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -663,7 +671,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 985548338d30c2e4a9ee8381193d6d30, type: 2}
+  - {fileID: 2100000, guid: 39b502a4196a4164db9fb30e890266ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -755,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5921569, g: 0, b: 0.6901961, a: 1}
+  m_Color: {r: 0, g: 0.77254903, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -963,7 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5921569, g: 0, b: 0.6901961, a: 1}
+  m_Color: {r: 0, g: 0.77254903, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1062,7 +1070,7 @@ PrefabInstance:
     - target: {fileID: 2300002, guid: 4b008fbfbe2c6414a911cf75986d72c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 67af7e32795ffd648b79f3be33f01537, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fbd5bc7b9682ec4bb36be45cb9ea81f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b008fbfbe2c6414a911cf75986d72c2, type: 3}
 --- !u!1 &814900332
@@ -1115,7 +1123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67af7e32795ffd648b79f3be33f01537, type: 2}
+  - {fileID: 2100000, guid: 1fbd5bc7b9682ec4bb36be45cb9ea81f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1207,7 +1215,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67af7e32795ffd648b79f3be33f01537, type: 2}
+  - {fileID: 2100000, guid: 1fbd5bc7b9682ec4bb36be45cb9ea81f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1510,7 +1518,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67af7e32795ffd648b79f3be33f01537, type: 2}
+  - {fileID: 2100000, guid: 1fbd5bc7b9682ec4bb36be45cb9ea81f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1586,7 +1594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -256, y: 18}
+  m_AnchoredPosition: {x: -236, y: 18}
   m_SizeDelta: {x: 428.75, y: 126.7}
   m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!114 &1606718674
@@ -1602,7 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9882353, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.53333336, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1912,7 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5921569, g: 0, b: 0.6901961, a: 1}
+  m_Color: {r: 0, g: 0.77254903, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
