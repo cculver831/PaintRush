@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Moverment : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float speed = 100f;
     public float rotationSpeed = 100f;
     Vector2 input;
     float angle;
     Quaternion targetRotation;
-    Transform cam;
+ 
     private void Start()
     {
-        cam = Camera.main.transform;
+    
     }
     void Update()
     {
@@ -33,7 +33,6 @@ public class Player_Moverment : MonoBehaviour
         //Direction relative to player based on camera 
         angle = Mathf.Atan2(input.x, input.y);
         angle = Mathf.Rad2Deg * angle;
-        angle += cam.eulerAngles.y;
     }
     void Rotate()
     {
