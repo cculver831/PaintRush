@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 100f;
-    public float rotationSpeed = 100f;
+    public GameObject Brush;
+    public float BrushSize = 5f;
+    public float speed = 5f;
+    public float rotationSpeed = 5f;
+    private bool PlayerMove = false;
     Vector2 input;
     float angle;
     Quaternion targetRotation;
- 
+
     private void Start()
     {
-    
+
     }
     void Update()
     {
@@ -27,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
         // Input based on WASD keys
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
+        PlayerMove = true;
+        if (PlayerMove)
+        {
+            var position = transform.TransformPoint(Vector3.zero);
+            var go = Instantiate(Brush, transform.TransformPoint(Vector3.zero), Quaternion.identity, transform);
+        }
     }
     void CalculateDirection()
     {
