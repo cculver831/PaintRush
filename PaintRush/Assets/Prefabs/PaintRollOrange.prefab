@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 1037545315}
   - component: {fileID: 1037545317}
   m_Layer: 0
-  m_Name: PaintRollBlue 5
+  m_Name: PaintRollOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
