@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 _lastposition;
     float angle;
     Quaternion targetRotation;
+    public Camera mainCamera;
+    public Texture2D splashTexture;
 
     private void Start()
     {
@@ -30,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
     }
     void GetInput()
     {
+        if(Input.GetButton("joystick button 0"))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit))
+            {
+                //MyShaderBehavior script = hit.collider.gameObject.GetComponent();
+                //if (null != script)
+                    //script.PaintOn(hit.textureCoord, splashTexture);
+            }
+        }
         // Input based on WASD keys
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
