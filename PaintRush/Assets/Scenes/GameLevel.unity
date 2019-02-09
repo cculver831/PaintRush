@@ -1240,6 +1240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1037545314, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_Name
       value: PaintRollOrange
@@ -1292,10 +1296,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1037545317, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1037545316, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -1308,8 +1308,7 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.05
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1037545317, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
 --- !u!1 &1066900394
 GameObject:
@@ -1906,8 +1905,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 5
-  Horizontal: Horizontal_P1
-  Vertical: Horizontal_P1
 --- !u!1 &1831733801
 GameObject:
   m_ObjectHideFlags: 0
