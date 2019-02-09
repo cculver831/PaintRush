@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     
     public float speed = 5f;
     public float rotationSpeed = 5f;
-    //public string Horizontal = "Horizontal_P1";
-    //public string Vertical= "Vertical_P1";
+    public string Horizontal = "Horizontal_P1";
+    public string Vertical= "Vertical_P1";
    
     Vector3 currentPosition;
     Vector2 input;
@@ -34,8 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
  
         // Input based on WASD keys
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        input.x = Input.GetAxisRaw(Horizontal);
+        input.y = Input.GetAxisRaw(Vertical);
     }
     void CalculateDirection()
     {   
