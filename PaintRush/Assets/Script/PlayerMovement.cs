@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject Brush;
-    public float BrushSize = 5f;
+    
     public float speed = 5f;
     public float rotationSpeed = 5f;
-    private bool PlayerMove = false;
+    //public string Horizontal = "Horizontal_P1";
+    //public string Vertical= "Vertical_P1";
+   
     Vector3 currentPosition;
     Vector2 input;
     Vector3 _lastposition;
     float angle;
     Quaternion targetRotation;
-    public Camera mainCamera;
-    public Texture2D splashTexture;
+   
 
     private void Start()
     {
@@ -32,31 +32,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void GetInput()
     {
-        if(Input.GetButton("joystick button 0"))
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit))
-            {
-                //MyShaderBehavior script = hit.collider.gameObject.GetComponent();
-                //if (null != script)
-                    //script.PaintOn(hit.textureCoord, splashTexture);
-            }
-        }
+ 
         // Input based on WASD keys
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        PlayerMove = true;
-        if (PlayerMove)
-        {
-            // spawns paint behind player (is supposed to)
-            var position = transform.TransformPoint(Vector3.zero);
-            var go = Instantiate(Brush, new Vector3(input.x, input.y, 0.1f), Quaternion.identity, transform);
-            go.transform.localScale = Vector3.one * BrushSize;
-            
-        }
     }
     void CalculateDirection()
-    {
+    {   
         //Direction relative to player based on camera 
         angle = Mathf.Atan2(input.x, input.y);
         angle = Mathf.Rad2Deg * angle;
