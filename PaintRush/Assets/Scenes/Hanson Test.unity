@@ -1258,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1295,6 +1295,18 @@ PrefabInstance:
     - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 218.65776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 218.65723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037545318, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 218.65723
       objectReference: {fileID: 0}
     - target: {fileID: 1037545316, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_IsKinematic
@@ -1904,6 +1916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 5
+  Horizontal: Horizontal_P1
+  Vertical: Vertical_P1
 --- !u!1 &1831733801
 GameObject:
   m_ObjectHideFlags: 0
