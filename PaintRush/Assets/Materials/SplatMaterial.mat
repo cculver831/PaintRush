@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatTileNormalTex:
-        m_Texture: {fileID: 2800000, guid: caa85b3e66828384c90a547928136183, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8a20113fd4622124b9c0476530de04fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

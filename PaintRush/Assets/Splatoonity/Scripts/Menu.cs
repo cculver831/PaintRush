@@ -20,8 +20,6 @@ public class Menu : MonoBehaviour {
 	//}
 
 	void OnGUI () {
-		GUI.DrawTexture (new Rect (20, 20, menu.width, menu.height), menu);
-
 		Vector4 scores = SplatManagerSystem.instance.scores + new Vector4(0.001f,0.001f,0.001f,0.001f);
 		float totalScores = scores.x + scores.y + scores.z + scores.w;
 		int yelowScore = (int)( 512 * ( scores.x / totalScores ) );
@@ -29,10 +27,10 @@ public class Menu : MonoBehaviour {
 		int greenScore = (int)( 512 * ( scores.z / totalScores ) );
 		int blueScore = (int)( 512 * ( scores.w / totalScores ) );
 
-		GUI.DrawTexture (new Rect (20 + menu.width + 20, 20, yelowScore, 30), sliderYellow);
-		GUI.DrawTexture (new Rect (20 + menu.width + 20, 60, redScore, 30), sliderRed);
-		GUI.DrawTexture (new Rect (20 + menu.width + 20, 100, greenScore, 30), sliderGreen);
-		GUI.DrawTexture (new Rect (20 + menu.width + 20, 140, blueScore, 30), sliderBlue);
+		GUI.DrawTexture (new Rect (40, 20, yelowScore, 30), sliderYellow);
+		GUI.DrawTexture (new Rect (40, 60, redScore, 30), sliderRed);
+		GUI.DrawTexture (new Rect (40, 100, greenScore, 30), sliderGreen);
+		GUI.DrawTexture (new Rect (40, 140, blueScore, 30), sliderBlue);
 
 	}
 }
