@@ -29,7 +29,7 @@ public class splatPaint : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            channelMask = new Vector4(0, 1, 0, 0);
+            channelMask = new Vector4(1, 1, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
