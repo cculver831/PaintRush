@@ -353,7 +353,7 @@ public class SplatManager : MonoBehaviour {
 			scoresColor += Tex4.GetPixel(3,2);
 			scoresColor += Tex4.GetPixel(3,3);
 
-			scores.x = scoresColor.a;
+			scores.x = scoresColor.r;
 			scores.y = scoresColor.g;
 			scores.z = scoresColor.b;
 			scores.w = scoresColor.a;
