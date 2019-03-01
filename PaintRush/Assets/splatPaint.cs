@@ -9,6 +9,7 @@ public class splatPaint : MonoBehaviour
     int splatsY = 1;
     public Transform roller;
     public float splatScale = 1.0f;
+    public int colorIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,22 +23,22 @@ public class splatPaint : MonoBehaviour
         splatsX = SplatManagerSystem.instance.splatsX;
         splatsY = SplatManagerSystem.instance.splatsY;
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (colorIndex == 1)
         {
             channelMask = new Vector4(1, 0, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (colorIndex == 2)
         {
             channelMask = new Vector4(1, 1, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (colorIndex == 3)
         {
             channelMask = new Vector4(0, 0, 1, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (colorIndex == 4)
         {
             channelMask = new Vector4(0, 0, 0, 1);
         }

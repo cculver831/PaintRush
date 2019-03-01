@@ -2066,6 +2066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roller: {fileID: 1718172381}
   splatScale: 2.54
+  colorIndex: 2
 --- !u!4 &1718172381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1037545318, guid: 644774693c117624c854e6f25656e7b7,
@@ -2114,6 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roller: {fileID: 1756668147}
   splatScale: 2
+  colorIndex: 1
 --- !u!1 &1831733801
 GameObject:
   m_ObjectHideFlags: 0
