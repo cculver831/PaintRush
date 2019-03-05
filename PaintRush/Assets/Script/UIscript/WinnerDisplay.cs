@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WinnerDisplay : MonoBehaviour
 {
@@ -29,11 +30,11 @@ public class WinnerDisplay : MonoBehaviour
         }
         
     }
-
     
     void Update()
     {
         Text winner = GetComponent<Text>();
         winner.text = "Winner " + GetMax();
     }
+
 }
