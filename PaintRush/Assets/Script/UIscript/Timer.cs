@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
             doOnce = true;
             uiText.text = "0.00";
             timer = 0.0f;
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("DisplayWinner");
         }
     }
 
