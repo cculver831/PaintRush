@@ -101,6 +101,7 @@ public class SplatManager : MonoBehaviour {
 	// this will keep duplicate splat managers from being enabled at once
 	void Awake () {
 
+
 		if (SplatManager.Instance != null) {
 			if (SplatManager.Instance != this) {
 				Destroy (this);
