@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class WinnerDisplay : MonoBehaviour
 {
+    // function finds the higher score out of the two players
     List<int> ScoreList;
     string GetMax()
     {
@@ -33,6 +34,7 @@ public class WinnerDisplay : MonoBehaviour
     
     void Update()
     {
+        // prints statement of winner in text on screen
         Text winner = GetComponent<Text>();
         winner.text = "Winner " + GetMax();
     }
