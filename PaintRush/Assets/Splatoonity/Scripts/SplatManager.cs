@@ -34,7 +34,7 @@ public class SplatManagerSystem
 	
 	public void AddSplat (Splat splat)
 	{
-		//Debug.Log ("Adding Splat");
+		Debug.Log ("Adding Splat");
 		m_Splats.Add (splat);
 	}
 
