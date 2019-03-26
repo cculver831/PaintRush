@@ -10,6 +10,8 @@ public class WinnerButtons : MonoBehaviour
     public void PlayAgain()
     {
         SceneManager.LoadScene("GameLevel");
+        SplatManagerSystem.instance.m_RendererAray = new List<List<Renderer>>();
+        SplatManagerSystem.instance.m_Renderers = new List<Renderer>();
     }
     public void LoadMenu()
     {
