@@ -34,7 +34,6 @@ public class SplatManagerSystem
 	
 	public void AddSplat (Splat splat)
 	{
-		Debug.Log ("Adding Splat");
 		m_Splats.Add (splat);
 	}
 
@@ -50,8 +49,6 @@ public class SplatManagerSystem
 		while (renderer.lightmapIndex >= m_RendererAray.Count) {
 			m_RendererAray.Add (new List<Renderer> ());
 		}
-
-		Debug.Log ("Adding Renderer");
 		m_RendererAray [renderer.lightmapIndex].Add (renderer);
 		m_Renderers.Add (renderer);
 	}
