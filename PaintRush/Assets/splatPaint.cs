@@ -70,4 +70,8 @@ public class splatPaint : MonoBehaviour
 
         GameObject.Destroy(newSplatObject);
     }
+    public void Big()
+    {
+        splatScale = 7;
+    }
 }

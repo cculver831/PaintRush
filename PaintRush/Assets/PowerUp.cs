@@ -33,4 +33,5 @@ public class PowerUp : MonoBehaviour
         Debug.Log("Speed now " + speed);
         Destroy(gameObject);
     }
+
 }
