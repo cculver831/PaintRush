@@ -26,7 +26,6 @@ public class PowerUp : MonoBehaviour
     }
     void PickUp2()
     {
-
         PlayerMovement1 speed = GameObject.Find("Player2").GetComponent<PlayerMovement1>();
         speed.yeet();
         Debug.Log("Yeet");
