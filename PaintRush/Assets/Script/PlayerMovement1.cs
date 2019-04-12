@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
     
     public static float speed = 5f;
     public static float rotationSpeed = 5f;
-    public string Horizontal = "Horizontal_P1";
-    public string Vertical= "Vertical_P1";
+    public string Horizontal = "Horizontal_P2";
+    public string Vertical= "Vertical_P2";
    
     Vector3 currentPosition;
     Vector2 input;
@@ -57,6 +57,5 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = 10;
     }
-
 
 }
