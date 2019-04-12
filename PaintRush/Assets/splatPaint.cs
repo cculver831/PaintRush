@@ -10,6 +10,7 @@ public class splatPaint : MonoBehaviour
     public Transform roller;
     public float splatScale = 1.0f;
     public int colorIndex;
+    public int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,31 +44,39 @@ public class splatPaint : MonoBehaviour
             channelMask = new Vector4(0, 0, 0, 1);
         }
 
-
-        Vector3 leftVec = Vector3.Cross(roller.transform.position, Vector3.up);
-        float randScale = Random.Range(0.5f, 1.5f);
-
-        GameObject newSplatObject = new GameObject();
-        newSplatObject.transform.position = roller.transform.position;
-        if (leftVec.magnitude > 0.001f)
+        if(count == 10)
         {
-            newSplatObject.transform.rotation = Quaternion.LookRotation(leftVec, roller.transform.position);
+            Vector3 leftVec = Vector3.Cross(roller.transform.position, Vector3.up);
+            float randScale = Random.Range(0.5f, 1.5f);
+
+            GameObject newSplatObject = new GameObject();
+            newSplatObject.transform.position = roller.transform.position;
+            if (leftVec.magnitude > 0.001f)
+            {
+                newSplatObject.transform.rotation = Quaternion.LookRotation(leftVec, roller.transform.position);
+            }
+            newSplatObject.transform.localScale = new Vector3(randScale, randScale * 0.5f, randScale) * splatScale;
+
+            Splat newSplat;
+            newSplat.splatMatrix = newSplatObject.transform.worldToLocalMatrix;
+            newSplat.channelMask = channelMask;
+
+            float splatscaleX = 1.0f / splatsX;
+            float splatscaleY = 1.0f / splatsY;
+            float splatsBiasX = Mathf.Floor(Random.Range(0, splatsX * 0.99f)) / splatsX;
+            float splatsBiasY = Mathf.Floor(Random.Range(0, splatsY * 0.99f)) / splatsY;
+
+            newSplat.scaleBias = new Vector4(splatscaleX, splatscaleY, splatsBiasX, splatsBiasY);
+
+            SplatManagerSystem.instance.AddSplat(newSplat);
+
+            GameObject.Destroy(newSplatObject);
+            count = 0;
         }
-        newSplatObject.transform.localScale = new Vector3(randScale, randScale * 0.5f, randScale) * splatScale;
-
-        Splat newSplat;
-        newSplat.splatMatrix = newSplatObject.transform.worldToLocalMatrix;
-        newSplat.channelMask = channelMask;
-
-        float splatscaleX = 1.0f / splatsX;
-        float splatscaleY = 1.0f / splatsY;
-        float splatsBiasX = Mathf.Floor(Random.Range(0, splatsX * 0.99f)) / splatsX;
-        float splatsBiasY = Mathf.Floor(Random.Range(0, splatsY * 0.99f)) / splatsY;
-
-        newSplat.scaleBias = new Vector4(splatscaleX, splatscaleY, splatsBiasX, splatsBiasY);
-
-        SplatManagerSystem.instance.AddSplat(newSplat);
-
-        GameObject.Destroy(newSplatObject);
+        else
+        {
+            count++;
+        }
+        
     }
 }
