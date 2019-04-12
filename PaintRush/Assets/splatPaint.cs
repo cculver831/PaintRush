@@ -83,4 +83,8 @@ public class splatPaint : MonoBehaviour
     {
         splatScale = 7;
     }
+    public void change(int index)
+    {
+        colorIndex = index;
+    }
 }
