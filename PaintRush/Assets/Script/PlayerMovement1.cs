@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement1 : MonoBehaviour
 {
     
-    public static float speed = 5f;
-    public static float rotationSpeed = 5f;
+    public float speed = 5f;
+    public float rotationSpeed = 5f;
     public string Horizontal = "Horizontal_P2";
     public string Vertical= "Vertical_P2";
    
