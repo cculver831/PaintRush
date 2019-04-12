@@ -79,4 +79,8 @@ public class splatPaint : MonoBehaviour
         }
         
     }
+    public void Big()
+    {
+        splatScale = 7;
+    }
 }
