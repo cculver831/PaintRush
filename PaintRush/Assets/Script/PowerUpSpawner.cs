@@ -11,7 +11,7 @@ public class PowerUpSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        timeSpawns = timeWeaBTWs;
+        timeSpawns = timeBTWs;
     }
 
     // Update is called once per frame
