@@ -13,12 +13,19 @@ public class DummyThicc : MonoBehaviour
         }
         else if (other.CompareTag("Player 2"))
         {
-            PickUp(other);
+            PickUp2(other);
         }
     }
     public void PickUp(Collider player)
     {
         splatPaint splatSize = GameObject.Find("Player1").GetComponent<splatPaint>();
+        splatSize.Big();
+        player.transform.localScale *= multiplier;
+        Destroy(gameObject);
+    }
+    public void PickUp2(Collider player)
+    {
+        splatPaint splatSize = GameObject.Find("Player2").GetComponent<splatPaint>();
         splatSize.Big();
         player.transform.localScale *= multiplier;
         Destroy(gameObject);
