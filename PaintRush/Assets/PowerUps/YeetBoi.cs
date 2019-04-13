@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+public class YeetBoi : MonoBehaviour
 
 {
     public static float speed;
