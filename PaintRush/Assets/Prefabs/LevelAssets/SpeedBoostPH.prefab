@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5115531879127801982}
   - component: {fileID: 5115531879127801978}
   m_Layer: 0
-  m_Name: PU placeholder
-  m_TagString: Untagged
+  m_Name: SpeedBoostPH
+  m_TagString: powerUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

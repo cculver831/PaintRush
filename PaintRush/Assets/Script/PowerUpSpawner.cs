@@ -8,6 +8,7 @@ public class PowerUpSpawner : MonoBehaviour
     public Transform[] spawnLocations;
     private float timeSpawns;
     public float timeBTWs;
+    public GameObject temp;
     // Use this for initialization
     void Start()
     {
@@ -17,12 +18,13 @@ public class PowerUpSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //weapons
         if (timeSpawns <= 0)
         {
-            int randWeaInd = Random.Range(0, powerUps.Length);
-            int randWeaLocInd = Random.Range(0, spawnLocations.Length);
-            Instantiate(powerUps[randWeaInd], spawnLocations[randWeaLocInd].position, Quaternion.identity);
+            int randInd = Random.Range(0, powerUps.Length);
+            int randLocInd = Random.Range(0, spawnLocations.Length);
+            Instantiate(powerUps[randInd], spawnLocations[randLocInd].position, Quaternion.identity);
             timeSpawns = timeBTWs;
         }
         else

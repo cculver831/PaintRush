@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player1
   - Player 2
+  - powerUps
   layers:
   - Default
   - TransparentFX
