@@ -19,12 +19,12 @@ public class PaintSwitch : MonoBehaviour
     void TheOlSwticheroo(Collider player)
     {
         splatPaint switcher = GameObject.Find("Player2").GetComponent<splatPaint>();
-        switcher.change(0);
+        switcher.change(1);
         Destroy(gameObject);
     }
     void TheOlSwitcheroo2(Collider player)
     {
-        splatPaint switcher= GameObject.Find("Player1").GetComponent<splatPaint>();
+        splatPaint switcher = GameObject.Find("Player1").GetComponent<splatPaint>();
         switcher.change(3);
         Destroy(gameObject);
     }
