@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinnerButtons : MonoBehaviour
 {
     public GameObject WinnerDisplay;
+    public GameObject PlayerUI;
     public void LevelSelect()
     {
         SceneManager.LoadScene("Main Menu");
@@ -18,6 +19,7 @@ public class WinnerButtons : MonoBehaviour
         SplatManagerSystem.instance.m_Renderers = new List<Renderer>();
         SplatManagerSystem.instance.m_Splats = new List<Splat>();
         WinnerDisplay.SetActive(false);
+        PlayerUI.SetActive(true);
         Time.timeScale = 1f;
     }
     public void LoadMenu()
