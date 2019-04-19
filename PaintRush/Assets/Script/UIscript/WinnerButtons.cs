@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class WinnerButtons : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
-    public GameObject PlayerUI;
+ 
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("MainMenu");
+        
+    }
     public void PlayAgain()
     {
         SplatManagerSystem.instance.m_RendererAray = new List<List<Renderer>>();
         SplatManagerSystem.instance.m_Renderers = new List<Renderer>();
         SplatManagerSystem.instance.m_Splats = new List<Splat>();
-        SceneManager.LoadScene("GameLevel");
+        Time.timeScale = 1f;
     }
     public void LoadMenu()
     {

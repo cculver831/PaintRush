@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static bool levelSelect = false;
+    public GameObject levelS;
+    public GameObject Main;
+    public static bool MainM = true;
     public void Play()
     {
-        SceneManager.LoadScene("GameLevel");
+        levelSelect = true;
+        levelS.SetActive(true);
+        Main.SetActive(false);
+        MainM = false;
     }
     public void Options()
     {

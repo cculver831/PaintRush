@@ -8,7 +8,8 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private Text uiText;
     [SerializeField] private float mainTimer;
-
+    public GameObject Winnerdisplay;
+    public GameObject PlayerUI;
     private float timer;
     private bool canCount = true;
     private bool doOnce = false;
@@ -29,7 +30,10 @@ public class Timer : MonoBehaviour
             doOnce = true;
             uiText.text = "0.00";
             timer = 0.0f;
-            SceneManager.LoadScene("DisplayWinner");
+            Time.timeScale = 0f;
+            Winnerdisplay.SetActive(true);
+            PlayerUI.SetActive(false);
+            
         }
     }
 

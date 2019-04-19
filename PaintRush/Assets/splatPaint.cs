@@ -46,7 +46,7 @@ public class splatPaint : MonoBehaviour
             channelMask = new Vector4(0, 0, 0, 1);
         }
 
-        if(count >= 10)
+        if(count >= 2)
         {
             Vector3 leftVec = Vector3.Cross(roller.transform.position, Vector3.up);
             float randScale = Random.Range(0.5f, 1.5f);
