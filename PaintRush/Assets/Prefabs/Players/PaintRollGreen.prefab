@@ -271,8 +271,9 @@ GameObject:
   - component: {fileID: 1037545318}
   - component: {fileID: 1037545316}
   - component: {fileID: 1037545315}
+  - component: {fileID: 1037545317}
   m_Layer: 0
-  m_Name: PaintRollGreen
+  m_Name: PaintRollBlue 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,6 +328,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.03, z: 0.06}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1037545317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037545314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e1a6dd8a2162a4ebeb81e603684b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 5
 --- !u!1 &1413014503
 GameObject:
   m_ObjectHideFlags: 0

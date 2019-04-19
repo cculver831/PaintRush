@@ -11,8 +11,6 @@ public class splatPaint : MonoBehaviour
     public float splatScale = 1.0f;
     public int colorIndex;
     public int count = 0;
-    [Range(0,10)]
-    public int frame = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +44,7 @@ public class splatPaint : MonoBehaviour
             channelMask = new Vector4(0, 0, 0, 1);
         }
 
-        if(count >= frame)
+        if(count >= 10)
         {
             Vector3 leftVec = Vector3.Cross(roller.transform.position, Vector3.up);
             float randScale = Random.Range(0.5f, 1.5f);
