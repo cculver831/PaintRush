@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class splatPaint : MonoBehaviour
+
 {
+    public int multiplier = 1;
     Vector4 channelMask = new Vector4(1, 0, 0, 0);
     int splatsX = 1;
     int splatsY = 1;
@@ -44,7 +46,7 @@ public class splatPaint : MonoBehaviour
             channelMask = new Vector4(0, 0, 0, 1);
         }
 
-        if(count >= 10)
+        if(count >= 2)
         {
             Vector3 leftVec = Vector3.Cross(roller.transform.position, Vector3.up);
             float randScale = Random.Range(0.5f, 1.5f);
@@ -79,10 +81,12 @@ public class splatPaint : MonoBehaviour
         }
         
     }
-    public void Big()
+    public void Big(float x)
     {
-        splatScale = 7;
-    }
+
+    splatScale = x;
+        
+}
     public void change(int index)
     {
         colorIndex = index;
