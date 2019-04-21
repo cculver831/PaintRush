@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 2
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &19511172
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 0.073467255, g: 1, b: 0, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!135 &19511173
@@ -378,6 +378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870cd132253c1034f868d85031b2da3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _AudioClip: {fileID: 8300000, guid: a05738bff71070f41b7ac755b1ca406d, type: 3}
+  _useMicrophone: 0
+  selectedDevice: 
 --- !u!1 &99241301
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 6
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &99241303
 MonoBehaviour:
@@ -429,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 1, g: 0.5135952, b: 0, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!135 &99241304
@@ -609,7 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 0, g: 0.50198245, b: 1, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!114 &553600338
@@ -711,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 0
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!1 &871270124
 GameObject:
@@ -748,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 1
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &871270126
 MonoBehaviour:
@@ -764,7 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 1, g: 0, b: 0, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!135 &871270127
@@ -874,7 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 5
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &1108768249
 MonoBehaviour:
@@ -890,7 +893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 0.6681905, g: 0.2688679, b: 1, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!135 &1108768250
@@ -1000,7 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 4
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &1209529116
 MonoBehaviour:
@@ -1222,7 +1225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 8
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &1826582482
 MonoBehaviour:
@@ -1238,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeType: 0
   operation: 1
-  colour: {r: 1, g: 1, b: 1, a: 0.11764706}
+  colour: {r: 1, g: 0.9747956, b: 0, a: 1}
   blendStrength: 0.207
   numChildren: 0
 --- !u!135 &1826582483
@@ -1348,7 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 3
   startScale: 0
-  ScalMultiplier: 10
+  ScalMultiplier: 4
   useBuffer: 1
 --- !u!114 &1839265556
 MonoBehaviour:

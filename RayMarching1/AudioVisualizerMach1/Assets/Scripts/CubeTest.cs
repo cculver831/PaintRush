@@ -24,7 +24,7 @@ public class CubeTest : MonoBehaviour
         if (!useBuffer)
         {
             transform.localScale = new Vector3(transform.localScale.x, (Audio.audioBand[band] * ScalMultiplier) + startScale, transform.localScale.z);
-            Color color = new Color(Audio.audioBandBuffer[band], Audio.audioBandBuffer[band], Audio.audioBandBuffer[band]);
+            Color color = new Color(transform.localScale.x, Audio.audioBandBuffer[band], transform.localScale.z);
             material.SetColor ("_EmissionColor", color);
         }
     }

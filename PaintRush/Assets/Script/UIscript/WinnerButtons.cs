@@ -10,7 +10,6 @@ public class WinnerButtons : MonoBehaviour
     public void LevelSelect()
     {
         SceneManager.LoadScene("Main Menu");
-
         
     }
     public void PlayAgain()

@@ -6,6 +6,10 @@ using UnityEngine;
 public class Audio : MonoBehaviour
 {
     AudioSource _audioSource;
+    // Microphone inut
+    public AudioClip _AudioClip;
+    public bool _useMicrophone;
+    public string selectedDevice;
     public static float[] samples = new float[512];
     public static float[] frequencyBand = new float[8];
     public static float[] bandBuffer = new float[8];
@@ -21,7 +25,22 @@ public class Audio : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        if (_useMicrophone)
+        {
+            if(Microphone.devices.Length > 0)
+            {
+                selectedDevice = Microphone.devices[0].ToString();
+                _audioSource.clip = Microphone.Start(selectedDevice, true, 10, AudioSettings.outputSampleRate);
+            }
+            else
+            {
 
+            }
+        }
+        if (!_useMicrophone)
+        {
+            _audioSource.clip = _AudioClip;
+        }
 
     }
 

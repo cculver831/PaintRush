@@ -18,7 +18,7 @@ public class Shapes : MonoBehaviour
     {
         if (useBuffer)
         {
-            transform.localScale = new Vector3(transform.localScale.x , (Audio.audioBandBuffer[band]) * ScalMultiplier, transform.localScale.z);
+            transform.localScale = new Vector3((Audio.audioBandBuffer[band]) * ScalMultiplier, (Audio.audioBandBuffer[band]) * ScalMultiplier, (Audio.audioBandBuffer[band]) * ScalMultiplier);
             Color color = new Color(Audio.audioBandBuffer[band], Audio.audioBandBuffer[band], Audio.audioBandBuffer[band]);
             material.SetColor("_EmissionColor", color);
         }

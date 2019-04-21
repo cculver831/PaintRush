@@ -36,20 +36,17 @@ public class DummyThicc : MonoBehaviour
         Destroy(gameObject);
    
         timer = mainTimer;
-
-       if (timer >= 0.0f)
-       {
-       timer -= Time.deltaTime;
-       Debug.Log("The clock is ticking");
-       }
-       if (timer <= 0.0f)
-       {
-        Debug.Log("Time's up)");
-        player.transform.localScale /= multiplier;
-        splatSize.Big(2.54f);
+        if (timer >= 0.0f)
+        {
+            timer -= Time.deltaTime;
+            Debug.Log("The clock is ticking");
         }
- 
+        if (timer <= 0.0f)
+        {
+            Debug.Log("Time's up)");
+            player.transform.localScale /= multiplier;
+            splatSize.Big(2.54f);
+        }
     }
-
 
 }
