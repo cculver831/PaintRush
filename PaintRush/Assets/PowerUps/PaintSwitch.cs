@@ -4,40 +4,51 @@ using UnityEngine;
 
 public class PaintSwitch : MonoBehaviour
 {
+
     public static float speed;
     public float timer = 7f;
+    public float timer2 = 7f;
+    public GameObject PaintSwitchPrefab;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player1"))
         {
-            TheOlSwticheroo(other);
+           StopCoroutine(TheOlSwticheroo(other));
+            StartCoroutine(TheOlSwticheroo(other));
         }
         else if (other.CompareTag("Player 2"))
         {
-            TheOlSwitcheroo2(other);
+            StopCoroutine(TheOlSwitcheroo2(other));
+            StartCoroutine(TheOlSwitcheroo2(other));
         }
     }
-    void TheOlSwticheroo(Collider player)
+    //switches player2 paint color
+    IEnumerator TheOlSwticheroo(Collider player)
     {
         splatPaint switcher = GameObject.Find("Player2").GetComponent<splatPaint>();
         switcher.change(1);
+        Debug.Log("Paint switched2");
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
+        switcher.change(3);
         Destroy(gameObject);
+        Debug.Log("Gottem");
+       
     }
-    void TheOlSwitcheroo2(Collider player)
+    //switches player1 paint color
+   IEnumerator TheOlSwitcheroo2(Collider player)
     {
         splatPaint switcher = GameObject.Find("Player1").GetComponent<splatPaint>();
         switcher.change(3);
+        Debug.Log("Paint switched");
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
-        if (timer >= 0.0f)
-        {
-            timer -= Time.deltaTime;
-
-        }
-        else if (timer <= 0.0f)
-        {
-
-        }
+        switcher.change(1);
+       
+ 
     }
-}
 
 }
+
