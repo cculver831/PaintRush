@@ -9,24 +9,33 @@ public class PowerUpSpawner : MonoBehaviour
     private float timeSpawns;
     public float timeBTWs;
     public GameObject temp;
+    public List<Transform> availableLocation = new List<Transform>();
     // Use this for initialization
     void Start()
     {
         timeSpawns = timeBTWs;
+        foreach(Transform i in spawnLocations)
+        {
+            availableLocation.Add(i);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         //weapons
         if (timeSpawns <= 0)
         {
             int randInd = Random.Range(0, powerUps.Length);
             int randLocInd = Random.Range(0, spawnLocations.Length);
-            Instantiate(powerUps[randInd], spawnLocations[randLocInd].position, Quaternion.identity);
-            timeSpawns = timeBTWs;
-        }
+            if (availableLocation.Contains(spawnLocations[randLocInd]))
+            {
+                Instantiate(powerUps[randInd], spawnLocations[randLocInd].position, Quaternion.identity);
+                availableLocation.RemoveAt(randLocInd);
+                timeSpawns = timeBTWs;
+            }
+        } 
         else
         {
             timeSpawns -= Time.deltaTime;
