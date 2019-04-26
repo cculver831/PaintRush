@@ -14,41 +14,36 @@ public class DummyThicc : MonoBehaviour
     {
         if (other.CompareTag("Player1"))
         {
-            PickUp(other);
+            StopCoroutine(PickUp(other));
+            StartCoroutine(PickUp(other));
         }
         else if (other.CompareTag("Player 2"))
         {
-            PickUp2(other);
+            StopCoroutine(PickUp2(other));
+            StartCoroutine(PickUp2(other));
         }
     }
-    public void PickUp(Collider player)
+    IEnumerator PickUp(Collider player)
     {
         splatPaint splatSize = GameObject.Find("Player1").GetComponent<splatPaint>();
         splatSize.Big(7f);
         player.transform.localScale *= multiplier;
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
+        player.transform.localScale /= multiplier;
+        splatSize.Big(2.54f);
         Destroy(gameObject);
     }
-    public void PickUp2(Collider player)
+    IEnumerator PickUp2(Collider player)
     {
         splatPaint splatSize = GameObject.Find("Player2").GetComponent<splatPaint>();
         splatSize.Big(7f);
         player.transform.localScale *= multiplier;
-        Destroy(gameObject);
-   
-        timer = mainTimer;
-
-       if (timer >= 0.0f)
-       {
-       timer -= Time.deltaTime;
-       Debug.Log("The clock is ticking");
-       }
-       if (timer <= 0.0f)
-       {
-        Debug.Log("Time's up)");
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
         player.transform.localScale /= multiplier;
         splatSize.Big(2.54f);
-        }
- 
+        Destroy(gameObject);
     }
 
 
