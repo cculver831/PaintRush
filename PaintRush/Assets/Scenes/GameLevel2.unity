@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 2768630393368992040, guid: 2c5f52fc6dd5dff4190abfe89654e4a5, type: 3}
-  - {fileID: 2768630393368992040, guid: 2c5f52fc6dd5dff4190abfe89654e4a5, type: 3}
+  - {fileID: 5210813150826363846, guid: 6fc3c5303f691354bb30e8ad0785c135, type: 3}
+  - {fileID: 5115531879127801983, guid: b75f1b6b0235d8a4dabf23d75b7f8d17, type: 3}
   - {fileID: 2768630393368992040, guid: 2c5f52fc6dd5dff4190abfe89654e4a5, type: 3}
   spawnLocations:
   - {fileID: 635318740572300578}
@@ -1250,36 +1250,6 @@ PrefabInstance:
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 1572457700}
-    - target: {fileID: 5407027538866367514, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.14334556
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407027538866367514, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9528302
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407027538866367514, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407027540133540700, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407027540133540700, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.7534226
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407027540133540700, guid: a52f59228e1ff3e4fa28556f0264686d,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52f59228e1ff3e4fa28556f0264686d, type: 3}
 --- !u!1001 &5814763188771421198
