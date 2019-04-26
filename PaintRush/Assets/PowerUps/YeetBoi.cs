@@ -10,26 +10,31 @@ public class YeetBoi : MonoBehaviour
     {
        if (other.CompareTag("Player1"))
         {
-            PickUp(other);
+            StopCoroutine(PickUp(other));
+            StartCoroutine(PickUp(other));
         }
        else if (other.CompareTag("Player 2"))
         {
-            PickUp2();
+            StopCoroutine(PickUp2(other));
+            StartCoroutine(PickUp2(other));
         }
     }
-    void PickUp( Collider player)
+    IEnumerator PickUp( Collider player)
     {
         PlayerMovement speed = GameObject.Find("Player1").GetComponent<PlayerMovement>();
         speed.yeet();
         Debug.Log("Bread Acquired");
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
-    void PickUp2()
+    IEnumerator PickUp2(Collider player)
     {
         PlayerMovement1 speed = GameObject.Find("Player2").GetComponent<PlayerMovement1>();
         speed.yeet();
         Debug.Log("Yeet");
-        Debug.Log("Speed now " + speed);
+        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
 
