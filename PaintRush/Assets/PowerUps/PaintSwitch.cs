@@ -9,7 +9,11 @@ public class PaintSwitch : MonoBehaviour
     public float timer = 7f;
     public float timer2 = 7f;
     public GameObject PaintSwitchPrefab;
-
+    public GameObject[] powerManager;
+    void Awake()
+    {
+        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player1"))
@@ -29,9 +33,14 @@ public class PaintSwitch : MonoBehaviour
         splatPaint switcher = GameObject.Find("Player2").GetComponent<splatPaint>();
         switcher.change(1);
         Debug.Log("Paint switched2");
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         switcher.change(3);
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<CapsuleCollider>().enabled = true;
         Destroy(gameObject);
         Debug.Log("Gottem");
        
@@ -42,8 +51,13 @@ public class PaintSwitch : MonoBehaviour
         splatPaint switcher = GameObject.Find("Player1").GetComponent<splatPaint>();
         switcher.change(3);
         Debug.Log("Paint switched");
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<CapsuleCollider>().enabled = true;
         Destroy(gameObject);
         switcher.change(1);
        

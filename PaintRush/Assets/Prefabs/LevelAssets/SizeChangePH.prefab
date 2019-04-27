@@ -105,3 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTimer: 7
+  powerManager: {fileID: 6083391266827680224, guid: 8603be7dfcad1114c9527e9ff6450743,
+    type: 3}

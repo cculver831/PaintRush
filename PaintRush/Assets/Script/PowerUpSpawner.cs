@@ -28,17 +28,21 @@ public class PowerUpSpawner : MonoBehaviour
         if (timeSpawns <= 0)
         {
             int randInd = Random.Range(0, powerUps.Length);
-            int randLocInd = Random.Range(0, spawnLocations.Length);
+            int randLocInd = Random.Range(0, (spawnLocations.Length));
             if (availableLocation.Contains(spawnLocations[randLocInd]))
             {
-                Instantiate(powerUps[randInd], spawnLocations[randLocInd].position, Quaternion.identity);
-                availableLocation.RemoveAt(randLocInd);
-                timeSpawns = timeBTWs;
+                Instantiate(powerUps[randInd], availableLocation[availableLocation.IndexOf(spawnLocations[randLocInd])].position, Quaternion.identity);
+                availableLocation.Remove(spawnLocations[randLocInd]);
             }
+            timeSpawns = timeBTWs;
         } 
         else
         {
             timeSpawns -= Time.deltaTime;
         }
+    }
+    public void addTransform(Transform t)
+    {
+        availableLocation.Add(t);
     }
 }

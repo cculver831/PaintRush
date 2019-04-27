@@ -6,10 +6,11 @@ public class DummyThicc : MonoBehaviour
 {
     public static float multiplier = 2f;
     [SerializeField] private float mainTimer;
-
-    private float timer;
-    private bool canCount = true;
-    private bool doOnce = false;
+    public GameObject[] powerManager;
+    void Awake()
+    {
+        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player1"))
@@ -28,10 +29,15 @@ public class DummyThicc : MonoBehaviour
         splatPaint splatSize = GameObject.Find("Player1").GetComponent<splatPaint>();
         splatSize.Big(7f);
         player.transform.localScale *= multiplier;
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         player.transform.localScale /= multiplier;
         splatSize.Big(2.54f);
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
         Destroy(gameObject);
     }
     IEnumerator PickUp2(Collider player)
@@ -39,9 +45,14 @@ public class DummyThicc : MonoBehaviour
         splatPaint splatSize = GameObject.Find("Player2").GetComponent<splatPaint>();
         splatSize.Big(7f);
         player.transform.localScale *= multiplier;
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         player.transform.localScale /= multiplier;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
         splatSize.Big(2.54f);
         Destroy(gameObject);
     }

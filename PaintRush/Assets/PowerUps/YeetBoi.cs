@@ -6,6 +6,11 @@ public class YeetBoi : MonoBehaviour
 
 {
     public static float speed;
+    public GameObject[] powerManager;
+    void Awake()
+    {
+        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+    }
     void OnTriggerEnter(Collider other)
     {
        if (other.CompareTag("Player1"))
@@ -24,8 +29,13 @@ public class YeetBoi : MonoBehaviour
         PlayerMovement speed = GameObject.Find("Player1").GetComponent<PlayerMovement>();
         speed.yeet();
         Debug.Log("Bread Acquired");
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<SphereCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<SphereCollider>().enabled = true;
         Destroy(gameObject);
     }
     IEnumerator PickUp2(Collider player)
@@ -33,8 +43,13 @@ public class YeetBoi : MonoBehaviour
         PlayerMovement1 speed = GameObject.Find("Player2").GetComponent<PlayerMovement1>();
         speed.yeet();
         Debug.Log("Yeet");
-        transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<SphereCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
+        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<SphereCollider>().enabled = true;
         Destroy(gameObject);
     }
 

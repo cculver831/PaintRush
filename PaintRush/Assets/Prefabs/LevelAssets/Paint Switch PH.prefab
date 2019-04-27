@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805152f860dc48a47b5d4f7c84c41ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
-  switch2: 0
   timer: 7
   timer2: 7
   PaintSwitchPrefab: {fileID: 2768630393368992040}
+  powerManager: {fileID: 6083391266827680224, guid: 8603be7dfcad1114c9527e9ff6450743,
+    type: 3}
