@@ -6,10 +6,11 @@ public class YeetBoi : MonoBehaviour
 
 {
     public static float speed;
-    public GameObject[] powerManager;
-    void Awake()
+    public GameObject powerManager;
+    public int index;
+    private void Awake()
     {
-        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+        powerManager = GameObject.FindGameObjectWithTag("powerManager");
     }
     void OnTriggerEnter(Collider other)
     {
@@ -33,9 +34,9 @@ public class YeetBoi : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<SphereCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<SphereCollider>().enabled = true;
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
     }
     IEnumerator PickUp2(Collider player)
@@ -47,10 +48,13 @@ public class YeetBoi : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<SphereCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<SphereCollider>().enabled = true;
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
     }
-
+    public void returnI(int i)
+    {
+        index = i;
+    }
 }

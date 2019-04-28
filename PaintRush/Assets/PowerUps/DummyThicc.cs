@@ -6,10 +6,11 @@ public class DummyThicc : MonoBehaviour
 {
     public static float multiplier = 2f;
     [SerializeField] private float mainTimer;
-    public GameObject[] powerManager;
-    void Awake()
+    public int index;
+    public GameObject powerManager;
+    private void Start()
     {
-        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+        powerManager = GameObject.FindGameObjectWithTag("powerManager");
     }
     void OnTriggerEnter(Collider other)
     {
@@ -33,11 +34,11 @@ public class DummyThicc : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         player.transform.localScale /= multiplier;
         splatSize.Big(2.54f);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<BoxCollider>().enabled = true;
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
     }
     IEnumerator PickUp2(Collider player)
@@ -49,13 +50,16 @@ public class DummyThicc : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         player.transform.localScale /= multiplier;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<BoxCollider>().enabled = true;
         splatSize.Big(2.54f);
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
     }
-
+    public void returnI(int i)
+    {
+        index = i;
+    }
 
 }

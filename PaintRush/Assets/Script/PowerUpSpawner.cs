@@ -9,14 +9,14 @@ public class PowerUpSpawner : MonoBehaviour
     private float timeSpawns;
     public float timeBTWs;
     public GameObject temp;
-    public List<Transform> availableLocation = new List<Transform>();
+    public List<bool> isEmpty = new List<bool>();
     // Use this for initialization
     void Start()
     {
         timeSpawns = timeBTWs;
-        foreach(Transform i in spawnLocations)
+        foreach (Transform i in spawnLocations)
         {
-            availableLocation.Add(i);
+            isEmpty.Add(true);
         }
     }
 
@@ -29,10 +29,23 @@ public class PowerUpSpawner : MonoBehaviour
         {
             int randInd = Random.Range(0, powerUps.Length);
             int randLocInd = Random.Range(0, (spawnLocations.Length));
-            if (availableLocation.Contains(spawnLocations[randLocInd]))
+            if (isEmpty[randLocInd])
             {
-                Instantiate(powerUps[randInd], availableLocation[availableLocation.IndexOf(spawnLocations[randLocInd])].position, Quaternion.identity);
-                availableLocation.Remove(spawnLocations[randLocInd]);
+                temp = Instantiate(powerUps[randInd], spawnLocations[randLocInd].position, Quaternion.identity);
+                isEmpty[randLocInd] = false;
+                if (temp.GetComponent("PaintSwitch") != null)
+                {
+                    temp.GetComponent<PaintSwitch>().returnI(randLocInd);
+                }
+                else if(temp.GetComponent("YeetBoi") != null)
+                {
+                    temp.GetComponent<YeetBoi>().returnI(randLocInd);
+                }
+                else
+                {
+                    temp.GetComponent<DummyThicc>().returnI(randLocInd);
+                }
+                
             }
             timeSpawns = timeBTWs;
         } 
@@ -41,8 +54,8 @@ public class PowerUpSpawner : MonoBehaviour
             timeSpawns -= Time.deltaTime;
         }
     }
-    public void addTransform(Transform t)
+    public void powerBack(int i)
     {
-        availableLocation.Add(t);
+        isEmpty[i] = true;
     }
 }

@@ -9,10 +9,11 @@ public class PaintSwitch : MonoBehaviour
     public float timer = 7f;
     public float timer2 = 7f;
     public GameObject PaintSwitchPrefab;
-    public GameObject[] powerManager;
-    void Awake()
+    public GameObject powerManager;
+    public int index;
+    private void Awake()
     {
-        powerManager = GameObject.FindGameObjectsWithTag("powerManager");
+        powerManager = GameObject.FindGameObjectWithTag("powerManager");
     }
     void OnTriggerEnter(Collider other)
     {
@@ -37,10 +38,10 @@ public class PaintSwitch : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         switcher.change(3);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
         Debug.Log("Gottem");
        
@@ -55,14 +56,17 @@ public class PaintSwitch : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
         yield return new WaitForSeconds(5f);
-        powerManager[0].GetComponent<PowerUpSpawner>().addTransform(gameObject.transform);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
         Destroy(gameObject);
         switcher.change(1);
        
  
     }
-
+    public void returnI(int i)
+    {
+        index = i;
+    }
 }
 
