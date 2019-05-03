@@ -18,14 +18,14 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         vol = volNum;
-        volConversion = -74;
+        volConversion = -40;
     }
-
     public void SetVolumeHigh()
     {
         if(stopHigh==true)
         {
             vol += 0;
+            volConversion += 0;
         }
         if (vol == 10)
         {
@@ -34,8 +34,8 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             vol += 1;
-            volText.text = vol.ToString("F");
-            volConversion += 6;
+            volText.text = vol.ToString();
+            volConversion += 9;
             audioMixer.SetFloat("Volume", volConversion);
             stopLow = false;
         }
@@ -45,6 +45,7 @@ public class SettingsMenu : MonoBehaviour
         if(stopLow==true)
         {
             vol += 0;
+            volConversion += 0;
         }
         if (vol <= 0f)
         {
@@ -53,8 +54,8 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             vol -= 1;
-            volText.text = vol.ToString("F");
-            volConversion += 6;
+            volText.text = vol.ToString();
+            volConversion -= 9;
             audioMixer.SetFloat("Volume", volConversion);
             stopHigh = false;
         }
