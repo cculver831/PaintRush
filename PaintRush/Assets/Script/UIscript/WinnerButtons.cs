@@ -7,11 +7,10 @@ public class WinnerButtons : MonoBehaviour
 {
     public GameObject WinnerDisplay;
     public GameObject PlayerUI;
+    public string level;
     public void LevelSelect()
     {
         SceneManager.LoadScene("Main Menu");
-
-        
     }
     public void PlayAgain()
     {
@@ -21,12 +20,11 @@ public class WinnerButtons : MonoBehaviour
         WinnerDisplay.SetActive(false);
         PlayerUI.SetActive(true);
         Time.timeScale = 1f;
+        SceneManager.LoadScene(level);
     }
     public void LoadMenu()
     {
-
      SceneManager.LoadScene("Main Menu");
-       
     }
     public void QuitGame()
     {

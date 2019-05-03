@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7))
         {
+            Debug.Log("Button is down");
             if (GameisPaused)
             {
                 Resume();

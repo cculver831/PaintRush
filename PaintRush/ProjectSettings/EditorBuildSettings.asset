@@ -11,25 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: b025b2528f393484fb04049a9ec93ed3
+  - enabled: 1
+    path: Assets/Scenes/GameLevel.unity
+    guid: 84255bfa931b52246acadc836c5e77a4
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/DisplayWinner.unity
-    guid: 9c5b5744d28ca9e44a7f47c2d3baadbd
-  - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: f68c254017e69ab44949f5fd6aad0225
-  - enabled: 1
-    path: Assets/Scenes/GameLevel.unity
-    guid: 84255bfa931b52246acadc836c5e77a4
-  - enabled: 1
     path: Assets/Scenes/GameLevel3.unity
     guid: 257d6653e9c89484f93ee6b2d783bcfd
-  - enabled: 0
-    path: Assets/Scenes/GameLevel3.unity
-    guid: 50cfa67d5b51d004ea223b631a4c8fe6
   - enabled: 1
     path: Assets/Scenes/GameLevel4.unity
     guid: 1c2413d95129af043ac238c17a417248
+  - enabled: 1
+    path: Assets/Scenes/GameLevel5.unity
+    guid: c5fed0b0a4138f24cafe346989831bec
+  - enabled: 1
+    path: Assets/Scenes/GameLevel6.unity
+    guid: a9e182e4762180547b4d1d967dd23c07
+  - enabled: 1
+    path: Assets/Scenes/GameLevel7.unity
+    guid: 215832c986167f04db5164e2d9fc4bab
+  - enabled: 1
+    path: Assets/Scenes/GameLevel8.unity
+    guid: b65cee89d6dec464180ec20e09ddd364
   m_configObjects: {}

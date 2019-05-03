@@ -15,7 +15,7 @@ MonoBehaviour:
   multiplier: 1
   roller: {fileID: 1051643866494444326}
   splatScale: 2.54
-  colorIndex: 2
+  colorIndex: 3
   count: 0
 --- !u!1001 &1051643866841156672
 PrefabInstance:
@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 227637353, guid: 644774693c117624c854e6f25656e7b7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e520ca4e4c5afa04791e63a9d0ab769a, type: 2}
+      objectReference: {fileID: 2100000, guid: 01de6e88fb65ac94489218b3293af854, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644774693c117624c854e6f25656e7b7, type: 3}
 --- !u!1 &1051643866494444322 stripped
