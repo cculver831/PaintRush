@@ -28,7 +28,7 @@ public class YeetBoi : MonoBehaviour
     IEnumerator PickUp( Collider player)
     {
         PlayerMovement speed = GameObject.Find("Player1").GetComponent<PlayerMovement>();
-        speed.yeet();
+        speed.yeet(10);
         Debug.Log("Bread Acquired");
         //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -36,13 +36,14 @@ public class YeetBoi : MonoBehaviour
         yield return new WaitForSeconds(5f);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<SphereCollider>().enabled = true;
-        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
+        //powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
+        speed.yeet(5);
         Destroy(gameObject);
     }
     IEnumerator PickUp2(Collider player)
     {
         PlayerMovement1 speed = GameObject.Find("Player2").GetComponent<PlayerMovement1>();
-        speed.yeet();
+        speed.yeet(10);
         Debug.Log("Yeet");
         //transform.position = new Vector3(transform.position.x + 100f, transform.position.y, transform.position.z + 100f);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -50,7 +51,8 @@ public class YeetBoi : MonoBehaviour
         yield return new WaitForSeconds(5f);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<SphereCollider>().enabled = true;
-        powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
+        //powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
+        speed.yeet(5);
         Destroy(gameObject);
     }
     public void returnI(int i)

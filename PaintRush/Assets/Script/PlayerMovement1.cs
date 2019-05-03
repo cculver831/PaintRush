@@ -53,9 +53,9 @@ public class PlayerMovement1 : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
 
     }
-    public void yeet()
+    public void yeet(int x)
     {
-        speed = 10;
+        speed = x;
     }
 
 }

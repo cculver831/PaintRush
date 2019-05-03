@@ -59,8 +59,9 @@ public class PaintSwitch : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
         powerManager.GetComponent<PowerUpSpawner>().powerBack(index);
-        Destroy(gameObject);
         switcher.change(1);
+        Destroy(gameObject);
+        
        
  
     }

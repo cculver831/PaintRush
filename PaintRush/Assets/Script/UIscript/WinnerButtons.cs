@@ -24,7 +24,9 @@ public class WinnerButtons : MonoBehaviour
     }
     public void LoadMenu()
     {
+
      SceneManager.LoadScene("Main Menu");
+       
     }
     public void QuitGame()
     {

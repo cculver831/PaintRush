@@ -28,9 +28,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3778b36f95e16a040a386fc88ac73012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: 1
   roller: {fileID: 3638912886369977993}
   splatScale: 2.54
-  colorIndex: 0
+  colorIndex: 4
+  count: 0
 --- !u!1001 &3638912887121717743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037545314, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_Name
-      value: PaintRollOrange
+      value: PaintRollOrange Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1037545314, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
       propertyPath: m_IsActive
@@ -110,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 227637353, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27ac0ff06e19b7d4ea2cd095bd51572c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4921a69bdac21274fbfedbbe0a78340b, type: 3}
 --- !u!1 &3638912886369977997 stripped
