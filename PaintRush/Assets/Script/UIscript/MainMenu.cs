@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public static bool levelSelect = false;
     public GameObject levelS;
+    public GameObject optionsUI;
     public GameObject Main;
     public static bool MainM = true;
     public void Play()
@@ -18,7 +19,13 @@ public class MainMenu : MonoBehaviour
     }
     public void Options()
     {
-        SceneManager.LoadScene("Options");
+        Main.SetActive(false);
+        optionsUI.SetActive(true);
+    }
+    public void Back()
+    {
+        optionsUI.SetActive(false);
+        Main.SetActive(true);
     }
     public void QuitGame()
     {
